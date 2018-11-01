@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/dictionary.cpp
+utility
+-
+algorithm
+-
+dictionary.hpp
+/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/dictionary.hpp
+
+/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/dictionary.hpp
+string
+-
+sstream
+-
+map
+-
+iostream
+-
+fstream
+-
+
+/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/main.cpp
+iostream
+-
+dictionary.hpp
+/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/dictionary.hpp
+

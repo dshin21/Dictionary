@@ -3,4 +3,4 @@ project(Dictionary)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Dictionary main.cpp)
+add_executable(Dictionary main.cpp dictionary.cpp dictionary.hpp)

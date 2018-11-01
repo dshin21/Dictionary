@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Dictionary.dir/main.cpp.o"
+  "CMakeFiles/Dictionary.dir/dictionary.cpp.o"
   "Dictionary.pdb"
   "Dictionary.exe"
   "libDictionary.dll.a"

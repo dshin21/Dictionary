@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/dictionary.cpp">
+			<Option target="Dictionary"/>
+		</Unit>
+		<Unit filename="/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/dictionary.hpp">
+			<Option target="Dictionary"/>
+		</Unit>
 		<Unit filename="/cygdrive/c/Users/Daniel Shin/Downloads/Dictionary/main.cpp">
 			<Option target="Dictionary"/>
 		</Unit>

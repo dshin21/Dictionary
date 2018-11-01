@@ -1,6 +1,10 @@
 #include <iostream>
+#include "dictionary.hpp"
 
 int main() {
-    std::cout << "Hello, World!" << std::endl;
-    return 0;
+    dictionary d{"../dictionary.txt"};
+    d.read_file();
+    for (auto const &x : d.get_map()) {
+        cout << x.first << " : " << x.second << std::endl;
+    }
 }
