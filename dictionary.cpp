@@ -30,9 +30,20 @@ void dictionary::read_file() {
 
 void dictionary::print_dictionary(map<string, string> &dictionary) {
     map<string, string>::iterator itr;
+    cout << "============================================" << endl;
     for (itr = dictionary.begin(); itr != dictionary.end(); ++itr) {
-        cout << itr->first << " : " << itr->second << endl;
+        cout << itr->first << " - " << itr->second << endl;
     }
+}
+
+void dictionary::print_menu() {
+    cout << "============================================" << endl;
+    cout << "MENU" << endl;
+    cout << "\t1 - Print Dictionary\n"
+         << "\t2 - Find word definition\n"
+         << "\t3 - Enter new word and definition\n"
+         << "\t4 - Exit" << endl;
+    cout << "============================================" << endl;
 }
 
 
