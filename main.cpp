@@ -14,6 +14,8 @@ int main() {
                 d.print_dictionary(d.get_map());
                 d.print_menu();
                 break;
+            case 2:
+                d.make_entry();
         }
 
 

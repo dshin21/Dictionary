@@ -46,5 +46,14 @@ void dictionary::print_menu() {
     cout << "============================================" << endl;
 }
 
+void dictionary::make_entry() {
+    string word;
+    string definition;
+
+    cin >> word;
+    cin >> definition;
+    dictionary_map.insert(pair<string, string>(word, definition));
+}
+
 
 

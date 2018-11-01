@@ -26,6 +26,8 @@ public:
 
     void print_menu();
 
+    void make_entry();
+
     map<string, string> &get_map() {
         return dictionary_map;
     }
