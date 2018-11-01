@@ -26,7 +26,11 @@ public:
 
     void print_menu();
 
+    void word_finder();
+
     void make_entry();
+
+    void write_to_file(string, string);
 
     map<string, string> &get_map() {
         return dictionary_map;

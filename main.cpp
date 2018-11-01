@@ -4,7 +4,6 @@
 int main() {
     dictionary d{"../dictionary.txt"};
     d.read_file();
-
     d.print_menu();
 
     int option;
@@ -15,7 +14,15 @@ int main() {
                 d.print_menu();
                 break;
             case 2:
+                d.word_finder();
+                d.print_menu();
+                break;
+            case 3:
                 d.make_entry();
+                d.print_menu();
+                break;
+            default:
+                cout << "Invalid Option";
         }
 
 

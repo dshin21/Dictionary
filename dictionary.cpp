@@ -46,14 +46,47 @@ void dictionary::print_menu() {
     cout << "============================================" << endl;
 }
 
+void dictionary::word_finder() {
+    cout << "Please enter a word to find" << endl;
+    string word;
+    cin >> word;
+
+    if ((dictionary_map.find(word) == dictionary_map.end())) {
+        cout << "The does not exists in the dictionary." << endl;
+    } else {
+        cout << word << " - " << dictionary_map.find(word)->second << endl;
+    }
+
+}
+
 void dictionary::make_entry() {
+    cout << "Please enter a word" << endl;
     string word;
     string definition;
+    bool exists = false;
 
-    cin >> word;
-    cin >> definition;
-    dictionary_map.insert(pair<string, string>(word, definition));
+
+    while (cin >> word && !exists)
+        if ((dictionary_map.find(word) != dictionary_map.end())) {
+            cout << "The exists in the dictionary. Please enter a new word.";
+        } else {
+            cout << "Enter a definition: " << endl;
+            cin >> definition;
+            dictionary_map.insert(pair<string, string>(word, definition));
+            write_to_file(word, definition);
+            cout << word << " - " << definition << " added.\n" << endl;
+            exists = true;
+        }
 }
+
+void dictionary::write_to_file(string word, string definition) {
+    ofstream of{"../dictionary.txt", ios_base::app};
+    of << word << '\n' << definition << '\n';
+}
+
+
+
+
 
 
 
