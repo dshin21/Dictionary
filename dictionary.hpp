@@ -22,6 +22,8 @@ public:
 
     void read_file();
 
+    void print_dictionary(map<string, string> &);
+
     map<string, string> &get_map() {
         return dictionary_map;
     }
