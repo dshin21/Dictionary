@@ -22,7 +22,8 @@ int main() {
                 d.print_menu();
                 break;
             default:
-                cout << "Invalid Option";
+                cout << "Invalid Option" << endl;
+                d.print_menu();
         }
 
 

@@ -16,10 +16,10 @@ void dictionary::read_file() {
     string definition;
     int counter = 0;
 
-    while (getline(is, line, '\r')) {
+    while (getline(is, line)) {
         istringstream iss{line};
-        string::iterator end_pos = remove(line.begin(), line.end(), '\n');
-        line.erase(end_pos, line.end());
+//        string::iterator end_pos = remove(line.begin(), line.end(), '\n');
+//        line.erase(end_pos, line.end());
         (++counter == 1) ? word = line : definition = line;
         if (counter % 2 == 0) {
             dictionary_map.insert(pair<string, string>(word, definition));
@@ -71,7 +71,9 @@ void dictionary::make_entry() {
             cout << "The exists in the dictionary. Please enter a new word.";
         } else {
             cout << "Enter a definition: " << endl;
-            cin >> definition;
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+
+            getline(cin, definition);
             dictionary_map.insert(pair<string, string>(word, definition));
             write_to_file(word, definition);
             cout << word << " - " << definition << " added.\n" << endl;
